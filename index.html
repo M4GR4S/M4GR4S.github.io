@@ -59,7 +59,7 @@
     }
 
     /* set the main cointainer as a grid of columns */
-    .container {
+    #mainsection {
         display: grid;
         grid-template-columns: 1fr 2fr;
         column-gap: 20px;
@@ -151,6 +151,53 @@
         padding-bottom: 20px;
     }
 
+    /* Start of styling projectsection */
+    /* ******************************* */
+
+    /*Set projectsection's style */
+    #projectsection {
+        width: 80%;
+        margin: auto;
+        height: 100dvh;
+    }
+
+    /* Set the showcasecontainer to list the projects */
+    /* repeated in equal column of 3s per fractional unit */
+    .showcasecontainer{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    /* Set the card styles */
+    .projectcard{
+        font-size: small;
+        background-color: white;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding-bottom: 24px;
+    }
+
+    .projectcard h4, .projectcard p{
+        padding-left: 16px;
+    }
+
+    .projectcard img{
+        display: block;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 180px;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y:center;
+        background-repeat: no-repeat;
+        background-color: url (img/imgplaceholder.png);
+        text-indent: -9999px;
+    }
+    /* ***************************** */
+    /* End of styling projectsection */
 </style>
 </head>
 <body>
@@ -167,7 +214,8 @@
         </nav>
     </div>
 
-    <div class="container">
+    <!-- Start of mainsection -->
+    <section id="mainsection">
         <div class="left-div">
 
             <div class="profilecontainer">
@@ -190,7 +238,29 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- End of mainsection -->
+
+    <!-- Start of projectsection -->
+    <section id="projectsection">
+        <div class="showcasecontainer">
+            <!-- Card Template -->
+            <div class="projectcard">
+                <a href="#">
+                    <img src="" alt="Add description here">
+                    <!-- Project Name -->
+                    <h4>Project Name #1</h4>
+                    <p class="scope">Project Scrope #1</p>
+                    <p>
+                        <span>Tag 1</span>
+                        <span>Tag 2</span>
+                        <span>Tag 3</span>
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- End of projectsection -->
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
