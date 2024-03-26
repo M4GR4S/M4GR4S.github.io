@@ -163,7 +163,7 @@
       }
 
       /* set the <a> tags' styles */
-      .linkcontainer a {
+      button[type="submit"], .linkcontainer a {
         padding: 10px 20px;
         font-size: 16px;
         background: teal;
@@ -195,39 +195,40 @@
         padding-bottom: 20px;
       }
 
-    /* Start of styling projectsection */
-    /* ******************************* */
+      /* Start of styling projectsection */
+      /* ******************************* */
 
-    /* Set projectsection's style */
-    #projectsection{
-      width: 80%;
-      margin: auto;
-      height: 100dvh;
-  }
+      /* Set projectsection's style */
+      #projectsection {
+        width: 80%;
+        margin: auto;
+        height: 100dvh;
+      }
 
-    /* Set the schowcasecontainer to list the projects */
-    /* repeated in equal column of 3s per fractional unit */
-    .showcasecontainer{
+      /* Set the schowcasecontainer to list the projects */
+      /* repeated in equal column of 3s per fractional unit */
+      .showcasecontainer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
-    }
+      }
 
-    /* Set the card styles */
-    .projectcard{
+      /* Set the card styles */
+      .projectcard {
         font-size: small;
         background-color: white;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         padding-bottom: 24px;
-    }
+      }
 
-    .projectcard h4, .projectcard p{
+      .projectcard h4,
+      .projectcard p {
         padding-left: 16px;
-    }
+      }
 
-    /* Set the image in the project card */
-    .projectcard img{
+      /* Set the image in the project card */
+      .projectcard img {
         display: block;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -240,30 +241,30 @@
         background-repeat: no-repeat;
         background-image: url("img/imgplaceholder.png");
         text-indent: -9999px;
-    }
+      }
 
-    /* Set the project cards' scope style */
-    .projectcard .scope{
+      /* Set the project cards' scope style */
+      .projectcard .scope {
         text-transform: uppercase;
         padding-top: 8px;
         padding-bottom: 8px;
-    }
+      }
 
-    /* Set the mouseover effect for the the project card */
-    .projectcard:hover{
+      /* Set the mouseover effect for the the project card */
+      .projectcard:hover {
         transition: 0.5s ease-out;
         transform: scale(1.05);
-    }
+      }
 
-    /* Style to link(s) in the project card*/
-    .projectcard a{
+      /* Style to link(s) in the project card*/
+      .projectcard a {
         text-decoration: none;
         color: gray;
-        transform: scale(1.0);
-    }
+        transform: scale(1);
+      }
 
-    /* Set the styles for the tags in project card */
-    .projectcard span{
+      /* Set the styles for the tags in project card */
+      .projectcard span {
         font-size: x-small;
         align-content: space-between;
         border-radius: 6px;
@@ -271,34 +272,94 @@
         background-color: lightseagreen;
         padding: 5px 10px;
         display: inline-block;
-        color: #FFFFFF;
+        color: #ffffff;
         white-space: nowrap;
-    }
+      }
 
-    
-    /* ***************************** */
-    /* End of styling projectsection */
+      /* ***************************** */
+      /* End of styling projectsection */
 
-    /* Start of styling miscellaneous elements */
-    /* *************************************** */
+      /* Start of styling contactsection */
+      /* ******************************* */
 
-    .top{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+      /* Set contactsection's style*/
+      #contactsection {
+        width: 80%;
+        margin: auto;
+        height: 100dvh;
+      }
 
-    .top a{
-      margin-top: 20px;
-      text-decoration: none;
-      font-size: small;
-      color: lightseagreen;
-    }
+      /* set the profilecontainer */
+      .contactcontainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: normal;
+        padding: 20px;
+        border-radius: 20px;
+        border: 2px solid rgb(31, 178, 170, 0.3);
+      }
 
-    /* ************************************* */
-    /* End of styling miscellaneous elements */
+      /* set the labels */
+      label {
+        display: block;
+      }
 
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        border: 1px solid lightseagreen;
+        border-radius: 10px;
+        color: lightseagreen;
+        cursor: pointer;
+        font-size: medium;
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        text-decoration: none;
+        width: 400px;
+      }
 
+      button[type=reset]{
+        padding: 10px 20px;
+        font-size: 16px;
+        background: teal;
+        color: white;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        margin-right: 5px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      /* ***************************** */
+      /* End of styling contactsection */
+
+      /* Start of styling miscellaneous elements */
+      /* *************************************** */
+
+      .top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .top a {
+        margin-top: 20px;
+        text-decoration: none;
+        font-size: small;
+        color: lightseagreen;
+      }
+
+      .divider {
+        margin: auto;
+        width: 80%;
+        height: 5em;
+        border-top: 1px dashed rgb(211, 211, 211);
+      }
+
+      /* ************************************* */
+      /* End of styling miscellaneous elements */
     </style>
   </head>
   <body>
@@ -349,7 +410,6 @@
     <section id="projectsection">
       <div class="sectiontitle">Projects</div>
       <div class="showcasecontainer">
-
         <!-- Card #1 -->
         <div class="projectcard">
           <a href="#">
@@ -435,11 +495,55 @@
         </div>
       </div>
 
-      <div class="top">
-          <a href="#top">&#x25B2; Back to Top</a>
-      </div>
     </section>
     <!-- End of projectsection -->
+
+    <!-- Start of divider -->
+
+    <div class="divider">
+      <!-- This is a placeholder to create a divider -->
+    </div>
+    <!-- End of divider -->
+
+    <!-- Start of contact section -->
+    <section id="contactsection">
+      <div class="sectiontitle">Let's Talk</div>
+
+      <div class="contactcontainer">
+        <form>
+          <div>
+            <!-- Input for user's name -->
+            <label for="nameControlInput">Name:</label>
+            <input
+              type="text"
+              id="nameControlInput"
+              placeholder="e.g John Doe"
+            />
+          </div>
+          <div>
+            <!-- Input for user's email -->
+            <label for="emailControlInput">Email:</label>
+            <input
+              type="email"
+              id="emailControlInput"
+              placeholder="name@example.com"
+            />
+          </div>
+          <div>
+            <!-- Input for user's message -->
+            <label for="messageCrontrolInput">Message:</label>
+            <textarea id="messageControlInput" cols="30" rows="10"></textarea>
+          </div>
+          <!-- submit button here -->
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form>
+      </div>
+      <div class="top">
+        <a href="#top">&#x25B2; Back to Top</a>
+      </div>
+    </section>
+    <!-- End of contact section -->
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
