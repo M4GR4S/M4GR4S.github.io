@@ -1,8 +1,10 @@
 # Instructions: Working with HTML and CSS
+
 1. **Note:** The page design has been re-organised into sections using `<section>` tag:
     - `<section id="mainsection">` updated to `<div class = "container">`
     - `<section id="projectsection">` (newly included)
 2. Look for `projectsection` and update the cards within as follows:
+
     ```HTML
     <!-- Project card #1 -->
     <div class="projectcard">
@@ -65,8 +67,10 @@
         </a>
     </div>
     ```
+
 3. Update the styles to apply the changes for ***projectsection***
     Add the following styles for projectsection.
+
     ```css
     /* Start of styling projectsection */
     /* ******************************* */
@@ -137,13 +141,17 @@
     /* ***************************** */
     /* End of styling projectsection */
     ```
+
 4. Add within `projectsection` the below for users to go to the top of the page:
+
     ```HTML
     <div class="top">
         <a href="#top">&#x25B2; Back to Top</a>
     </div>
     ```
+
 5. To style the contents for **Back to Top**, include the following styles:
+
     ```css
     /* Start of styling miscellaneous elements */
     /* *************************************** */
